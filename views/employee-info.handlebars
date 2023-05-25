@@ -1,0 +1,23 @@
+{{!-- employee-info.handlebars --}}
+
+{{!-- Extend the main layout --}}
+{{!< main}}
+
+{{!-- Define the content for the body --}}
+{{#contentFor "body"}}
+  <h2>Employee Information</h2>
+
+  <div class="employee-info">
+    {{!-- Loop over each employee --}}
+    {{#each employees}}
+      <div class="employee">
+        <h3>{{name}}</h3>
+        <p><strong>Role:</strong> {{role}}</p>
+        <p><strong>Email:</strong> {{email}}</p>
+        <p><strong>Phone:</strong> {{phone}}</p>
+        <p><strong>Address:</strong> {{address}}</p>
+        <p><strong>Salary:</strong> {{salary}}</p>
+      </div>
+    {{/each}}
+  </div>
+{{/contentFor}}
