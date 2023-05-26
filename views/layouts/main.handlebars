@@ -1,33 +1,39 @@
-<!DOCTYPE html>
 <html Lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assistant Manager</title>
-{{!-- Link for css sheet will go here --}}
-{{!-- Link for css sheet will go here  --}}
-</head>
-<body>
-  <header>
-    <h1>Assistant Manager</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/Menu Items">Menu Items</a></li>
-        <li><a href="/Employees Information">Employees Information</a></li>
-        <li><a href="/Employee Schedule">Employee Schedule</a></li>
-        {{!-- Inventory Management will go here if time permits  --}}
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assistant Manager</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Assistant Manager</h1>
+      <nav class="nav-extended">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">Assistant Manager</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/menu-items">Menu Items</a></li>
+            <li><a href="/employee-info">Employee Information</a></li>
+            <li><a href="/employee-schedule">Employee Schedule</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  <main>
-    {{{body}}}
-  </main>
+    <main>
+      {{{body}}}
+    </main>
 
-  <footer>
-    <p>&copy; 2023 Assistant Manager. All rights reserved.</p>
-  </footer>
-  {{!-- Any JavaScript link will go here --}}
-</body>
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+          &copy; 2023 Assistant Manager. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
