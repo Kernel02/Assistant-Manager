@@ -1,10 +1,11 @@
 const router = require('express').Router();
+const path = require('path');
 
 
 // route to get to the homepage
 router.get('/', async (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/homepage.handlebars'));
-})
+    res.render('homepage.handlebars');
+});
 
 
 

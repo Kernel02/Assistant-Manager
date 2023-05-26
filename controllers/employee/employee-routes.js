@@ -1,8 +1,8 @@
 const router = require('express').Router();
-
+const employees = []
 
 router.get('/employee', async (req, res) => {
-    res.sendFile(path.join(__dirname, '.../views/'))
+    res.render('all')
 });
 
 module.exports = router;
