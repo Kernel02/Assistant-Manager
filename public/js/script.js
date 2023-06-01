@@ -3,6 +3,8 @@ const arrowIcon = $("#arrowDown");
 $(document).ready(function () {
   $(".parallax").parallax();
   $(".dropdown-trigger").dropdown();
+  $("ul.tabs").tabs();
+  $("select").formSelect();
 });
 
 function changeArrow() {
