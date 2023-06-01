@@ -1,34 +1,73 @@
 {{! employee-info.handlebars }}
+<div class="center-align">
+  <h2>Employee Information</h2>
 
-<h2>Employee Information</h2>
-
-<div class="employee-info">
-  {{! Loop over each employee }}
-  {{#each employees as employee}}
-    <div class="card">
-      <div class="card-content">
-        <h2>{{first_name}} {{last_name}}</h2>
-      </div>
-      <div class="card-tabs">
-        <ul class="tabs tabs-fixed-width">
-          <li class="tab"><a href="#role">Role</a></li>
-          <li class="tab"><a class="active" href="#personalInfo">Personal
-              Information</a></li>
-        </ul>
-      </div>
-      <div class="card-content grey lighten-4">
-        <div id="role">
-          <p><strong>Role:</strong> {{role}}</p>
-          <p><strong>Salary:</strong> {{salary}}</p>
+  <div id="employee-info" class="row center-align">
+    {{#each employees}}
+      <div class="card">
+        <div class="card-content">
+          <h2>{{first_name}} {{last_name}}</h2>
         </div>
-        <div id="personalInfo">
-          <p><strong>Email:</strong> {{email}}</p>
-          <p><strong>Phone:</strong> {{phone}}</p>
-          <p><strong>Address:</strong> {{address}}</p>
+        <div class="card-tabs">
+          <ul class="tabs">
+            <li class="tab"><a href="#{{id}}role">Role</a></li>
+            <li class="tab"><a class="active" href="#{{id}}info">Personal
+                Information</a></li>
+          </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+          <div id="{{id}}role">
+            <p><strong>Role:</strong> {{role}}</p>
+            <p><strong>Salary:</strong> {{salary}}</p>
+          </div>
+          <div id="{{id}}info">
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Phone:</strong> {{phone}}</p>
+            <p><strong>Address:</strong> {{address}}</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="employee">
-    </div>
-  {{/each}}
+    {{/each}}
+  </div>
+  <div class="divider"></div>
+  <h3>Add Employee</h3>
+  <div class="row card-panel">
+    <form class="col l5 center-align">
+      <div class="input-field">
+        <input id="first_name" type="text" class="validate" />
+        <label for="first_name">First Name</label>
+      </div>
+      <div class="input-field">
+        <input id="last_name" type="text" class="validate" />
+        <label for="last_name">Last Name</label>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <select>
+            {{#each roles}}
+              <option value="{{id}}">{{title}}</option>
+            {{/each}}
+          </select>
+          <label>Materialize Select</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input id="salary" type="number" class="validate" />
+          <label for="salary">Salary</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input id="email" type="email" class="validate" />
+          <label for="email">Email</label>
+        </div>
+      <div class="row">
+        <div class="input-field">
+          <input id="address" type="text" class="validate" />
+          <label for="address">Address</label>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

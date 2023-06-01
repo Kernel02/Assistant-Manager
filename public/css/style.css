@@ -21,6 +21,7 @@ img {
   border-style: solid;
   border-width: 10px;
   border-color: #ff9800;
+  margin: 20px;
 }
 
 .card-info {
@@ -33,4 +34,11 @@ img {
 
 #dropdown1 {
   top: -65px;
+}
+
+#employee-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

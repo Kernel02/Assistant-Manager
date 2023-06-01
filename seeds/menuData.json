@@ -5,7 +5,7 @@
     "description": "salad/mixed salad with chicken, boiled egg, and salad dressing",
     "category": "mixed salad",
     "price": 11.90,
-    "palory": "266 calories per 113 gram"
+    "calory": "266 calories per 113 gram"
     
  
   },
@@ -24,7 +24,7 @@
     "description": " lamb, berbere, garlic, green chiles, spiced butter, cardamom, tomatoes",
     "category": "tibs",
     "price": 11.90,
-    "salory": "444kcal per 113 gram"
+    "calory": "444kcal per 113 gram"
  
   },
 
