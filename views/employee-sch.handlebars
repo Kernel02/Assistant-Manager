@@ -1,0 +1,62 @@
+ {{!-- employee-schedule.handlebars  --}}
+
+<h2>Employee Schedule</h2>
+
+<div class="schedule">
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each hours}}
+        <tr>
+          <td>{{time}}</td>
+          <td>{{#if monday}}
+            <div class="schedule-event">
+              {{monday}}
+            </div>
+          {{/if}}</td>
+          <td>{{#if tuesday}}
+            <div class="schedule-event">
+              {{tuesday}}
+            </div>
+          {{/if}}</td>
+          <td>{{#if wednesday}}
+            <div class="schedule-event">
+              {{wednesday}}
+            </div>
+          {{/if}}</td>
+          <td>{{#if thursday}}
+            <div class="schedule-event">
+              {{thursday}}
+            </div>
+          {{/if}}</td>
+          <td>{{#if friday}}
+            <div class="schedule-event">
+              {{friday}}
+            </div>
+          {{/if}}</td>
+          <td>{{#if saturday}}
+            <div class="schedule-event">
+              {{saturday}}
+            </div>
+          {{/if}}</td>
+          <td>{{#if sunday}}
+            <div class="schedule-event">
+              {{sunday}}
+            </div>
+          {{/if}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
