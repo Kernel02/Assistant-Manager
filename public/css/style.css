@@ -1,3 +1,7 @@
+* {
+  font-family: "Josefin Sans", "Sans Serif";
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -7,13 +11,26 @@ body {
 main {
   flex: 1 0 auto;
 }
+
 img {
   max-width: 100%;
 }
+
 .home-category {
   height: 350px;
-  padding: 35px;
   border-style: solid;
   border-width: 10px;
   border-color: #ff9800;
+}
+
+.card-info {
+  margin-top: 55px;
+}
+
+.brand-logo {
+  margin-left: 15px;
+}
+
+#dropdown1 {
+  top: -65px;
 }
