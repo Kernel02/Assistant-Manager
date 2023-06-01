@@ -11,27 +11,27 @@ Menu.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Menu_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
 
-    Menu_Description: {
+    description: {
         type: DataTypes.STRING,
         allowNull: false,
       },
 
-    Menu_Category: {
+    category: {
         type: DataTypes.STRING,
         allowNull: false
       },
 
-    Menu_Price: {
+    price: {
         type: DataTypes.FLOAT,
         allowNull: false,
       },
 
-    Menu_Calory: {
+    calory: {
       type: DataTypes.STRING,
       allowNull: false,
        

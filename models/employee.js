@@ -11,31 +11,31 @@ Employee.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Employee_First_name: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
 
-    Employee_Last_name: {
+    last_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
 
 
-    Employee_Email: {
+    email: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    Employee_Adress: {
+    address: {
       type: DataTypes.STRING,
       allowNull: false,
        
     },
-    Employee_Salary: {
+    salary: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-    Employee_Role: {
+    role: {
       type: DataTypes.STRING,
       allowNull: false,
  
