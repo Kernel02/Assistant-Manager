@@ -19,4 +19,22 @@ router.get("/", async (req, res) => {
   }
 });
 
+
+
+
+router.post("/", async (req,res) => {
+    try {
+        await Employee.create({
+           first_name: req.body.first_name,
+           last_name: req.body.last_name,
+           salary: req.body.salary,
+           email: req.body.email,
+           address: req.body.address,
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
