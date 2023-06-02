@@ -1,12 +1,19 @@
+const router = require("express").Router();
+const { Menu } = require("../../models");
 
-const router = require('express').Router();
-const meals = [ {
+router.get("/", async (req, res) => {
+  try {
+    const menuData = await Menu.findAll({
+      order: [["name", "ASC"]],
+    });
+    const menuItems = menuData.map((item) => item.get({ plain: true }));
+    console.log(menuData);
+    console.log(menuItems);
 
-}];
-
-
-router.get('/menu', async (req, res) => {
-    res.render('all');
+    res.status(200).render("menu-items", { menuItems });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
