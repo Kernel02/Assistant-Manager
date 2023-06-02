@@ -1,0 +1,64 @@
+<h2>Menu Items</h2>
+
+{{! Existing Menu Items }}
+{{#if items.length}}
+  <ul class="menu-list">
+    {{#each items}}
+      <li class="menu-item">
+        <div class="item-header">
+          <h3 class="item-name">{{name}}</h3>
+          <button class="delete-btn" data-id="{{id}}">Delete</button>
+          {{! Delete button }}
+        </div>
+        <div class="item-details">
+          <p class="item-description">{{description}}</p>
+          <p class="item-price">Price: {{formatPrice price}}</p>
+          {{#if ingredients}}
+            <div class="item-ingredients">
+              <h4>Ingredients:</h4>
+              <ul>
+                {{#each ingredients}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          {{/if}}
+          {{#if calories}}
+            <div class="item-nutrition">
+              <h4>Calories:</h4>
+              <p>{{calories}}</p>
+            </div>
+          {{/if}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No menu items found.</p>
+{{/if}}
+
+{{! Form for Adding New Menu Items }}
+<form id="add-menu-item-form">
+  <h3>Add New Menu Item</h3>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" step="0.01" id="price" name="price" required />
+  </div>
+  <div class="form-group">
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients" name="ingredients"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="calories">Calories:</label>
+    <input type="number" id="calories" name="calories" />
+  </div>
+  <button type="submit" class="btn btn-primary">Add Item</button>
+</form>
