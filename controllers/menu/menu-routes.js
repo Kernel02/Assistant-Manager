@@ -6,16 +6,17 @@ router.get("/", async (req, res) => {
     try {
         const menuData = await Menu.findAll({
             order: [
-                ["name", "ASC"]
+                ["name", "ASC"],
             ],
         });
-        const menu = menuData.map((menu) =>
-        menu.get({ plain: true}) 
+        const menu = menuData.map((item) =>
+        item.get({ plain: true}) 
         );
 
 
         res.status(200).render("menu-items", {
-            menu });
+        menu });
+
     } catch (err) {
         res.status(500).json(err);
     }
@@ -40,6 +41,17 @@ router.post("/", async (req,res) => {
     }
 });
 
-
+router.delete('/:id', async(req,res) => { 
+    try {
+        const menuData = await Menu.destroy({
+            where: {
+                id: req.params.id,
+            }
+        });
+        res.status(200).json(menuData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;

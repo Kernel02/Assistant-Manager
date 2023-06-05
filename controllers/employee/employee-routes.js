@@ -30,7 +30,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req,res) => {
     try {
-        await Employee.create({
+    const newEmployeeData = await Employee.create({
             id: req.body.id,
            first_name: req.body.first_name,
            last_name: req.body.last_name,
@@ -43,5 +43,21 @@ router.post("/", async (req,res) => {
         res.status(500).json(err);
     }
 });
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const employeeData = await Employee.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+        res.status(200).json(employeeData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
+
 
 module.exports = router;
