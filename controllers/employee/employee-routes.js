@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
       employee.get({ plain: true })
     );
 
-    res.status(200).render("employee-info", { employees });
+    res.status(200).render("employee-info", { employees, roles });
   } catch (err) {
     res.status(500).json(err);
   }
