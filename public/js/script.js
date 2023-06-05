@@ -5,6 +5,7 @@ $(document).ready(function () {
   $(".dropdown-trigger").dropdown();
   $("ul.tabs").tabs();
   $("select").formSelect();
+  $(".carousel").carousel();
 });
 
 function changeArrow() {
