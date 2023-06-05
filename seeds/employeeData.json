@@ -5,9 +5,7 @@
     "last_name": "September",
     "email": "alexseptember@gmail.com",
     "address": "10000 Alexandria, VA",
-    "salary": 50000.66,
-    "role": "cashier"
- 
+    "phone": 301123123
   },
 
   {
@@ -15,8 +13,7 @@
     "last_name": "Eden",
     "email": "barbaraeden12@gmail.com",
     "address": "2000 Silver Spring, MD",
-    "salary": 55000.66,
-    "role": "assistant cook"
+    "phone": 6781123123
  
   },
 
@@ -25,8 +22,7 @@
     "last_name": "April",
     "email": "lukakuapril56@gmail.com",
     "address": "500 Alexandria, VA",
-    "salary": 60000.66,
-    "role": "chef"
+    "phone": 2401123123
  
   },
 
@@ -35,8 +31,7 @@
     "last_name": "August",
     "email": "liliaugust88@gmail.com",
     "address": "00 Alexandria, VA",
-    "salary": 5500.66,
-    "role": "senior cook"
+    "phone": 3021123456
  
   },
     
@@ -45,8 +40,8 @@
     "last_name": "January",
     "email": "jajanuary98@gmail.com",
     "address": "55 Washington, DC",
-    "salary": 65000.66,
-    "role": " admin"
+    "phone": 1011123456
+ 
  
   }
    

@@ -1,0 +1,24 @@
+[
+    {
+        "salary": "60120.87",
+        "description": "admin"
+    },
+
+    {
+        "salary": "50120.17",
+        "description": "cook"
+    },
+    {
+        "salary": "48120.10",
+        "description": "casheir"
+    },
+    {
+        "salary": "40120.99",
+        "description": "cleaner"
+    },
+    {
+        "salary": "550120.87",
+        "description": "senior cook"
+    }
+
+]

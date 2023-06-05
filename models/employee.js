@@ -20,7 +20,10 @@ Employee.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-
+    phone :{
+      type:DataTypes.INTEGER,
+     allowNull: false
+    },
 
     email: {
       type: DataTypes.STRING,
@@ -31,14 +34,15 @@ Employee.init(
       allowNull: false,
        
     },
-    salary: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
-    role: {
-      type: DataTypes.STRING,
-      allowNull: false,
  
+    role_id: {
+      type: DataTypes.INTEGER ,
+      allowNull: false,
+      references : {
+      model : Role,
+      key: "id",
+     }
+      
     },
   },
 
