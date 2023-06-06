@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const path = require('path');
+const withAuth = require('../utils/auth');
 
 
 // route to get to the homepage
