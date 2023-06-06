@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Employee, Role } = require("../../models");
+const withAuth = require('../../utils/auth');
 
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const employeeData = await Employee.findAll({
       include: [
@@ -37,6 +38,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req,res) => {
     try {
     const newEmployeeData = await Employee.create({
+            email: req.session.email,
             id: req.body.id,
            first_name: req.body.first_name,
            last_name: req.body.last_name,
@@ -62,7 +64,6 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
 
 
 

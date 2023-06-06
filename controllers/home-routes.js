@@ -8,6 +8,14 @@ router.get('/', async (req, res) => {
 });
 
 
+router.get('/' , (req, res) => {
+    if (req.sessionStore.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
+
 
 
 module.exports = router;
