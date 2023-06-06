@@ -16,6 +16,11 @@ img {
   max-width: 100%;
 }
 
+form {
+  max-width: 50%;
+  margin-left: 25%;
+}
+
 .home-category {
   height: 350px;
   border-style: solid;
@@ -37,6 +42,7 @@ img {
 }
 
 #employee-info {
+  margin: 20px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
