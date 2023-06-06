@@ -1,24 +1,29 @@
 [
     {
         "salary": "60120.87",
-        "description": "admin"
+        "title": "admin",
+        "description": "responsible for running reports, scheduling, and managing staff members."
     },
 
     {
         "salary": "50120.17",
-        "description": "cook"
+        "title": "cook",
+        "description": " preparing and cooking food in a specific station"
     },
     {
         "salary": "48120.10",
-        "description": "casheir"
+        "title": "casheir",
+        "description": "run credit and debit cards, make change for cash payments, and provide general customer service."
     },
     {
         "salary": "40120.99",
-        "description": "cleaner"
+        "title": "cleaner",
+        "description": "responsible for cleaning, stocking, and supplying designated facility areas"
     },
     {
         "salary": "550120.87",
-        "description": "senior cook"
+        "title": "senior cook",
+        "description": "preparing and cooking food in a specific station and assisting others"
     }
 
 ]
