@@ -89,15 +89,20 @@ const employeeHandler = async (event) => {
       "Content-Type": "application/json",
     },
   });
+
+  if (response.ok) {
+    document.location.replace("/employee");
+  } else {
+    alert("Failed to add employee");
+  }
 };
 
 const roleHandler = async (event) => {
+  console.log("role");
   event.preventDefault();
   const title = event.target[0].value;
   const description = event.target[1].value;
   const salary = event.target[2].value;
-
-  console.log(title, description, salary);
 
   const response = await fetch("/employee/role", {
     method: "POST",
@@ -110,6 +115,11 @@ const roleHandler = async (event) => {
       "Content-Type": "application/json",
     },
   });
+  if (response.ok) {
+    document.location.replace("/employee");
+  } else {
+    alert("Failed to add role");
+  }
 };
 
 const menuHandler = async (event) => {
@@ -132,6 +142,12 @@ const menuHandler = async (event) => {
       "Content-Type": "application/json",
     },
   });
+
+  if (response.ok) {
+    document.location.replace("/menu");
+  } else {
+    alert("Failed to add menu item");
+  }
 };
 
 $(document).ready(function () {

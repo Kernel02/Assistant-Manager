@@ -30,6 +30,7 @@ router.post("/", async (req, res) => {
       price: req.body.price,
       calory: req.body.calory,
     });
+    res.status(200).json(menuData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

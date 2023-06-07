@@ -1,29 +1,33 @@
 [
-    {
-        "salary": "60120.87",
-        "title": "admin",
-        "description": "responsible for running reports, scheduling, and managing staff members."
-    },
+  {
+    "salary": "60120.87",
+    "title": "admin",
+    "description": "responsible for running reports, scheduling, and managing staff members.",
+    "user_id": 1
+  },
 
-    {
-        "salary": "50120.17",
-        "title": "cook",
-        "description": " preparing and cooking food in a specific station"
-    },
-    {
-        "salary": "48120.10",
-        "title": "casheir",
-        "description": "run credit and debit cards, make change for cash payments, and provide general customer service."
-    },
-    {
-        "salary": "40120.99",
-        "title": "cleaner",
-        "description": "responsible for cleaning, stocking, and supplying designated facility areas"
-    },
-    {
-        "salary": "550120.87",
-        "title": "senior cook",
-        "description": "preparing and cooking food in a specific station and assisting others"
-    }
-
+  {
+    "salary": "50120.17",
+    "title": "cook",
+    "description": " preparing and cooking food in a specific station",
+    "user_id": 1
+  },
+  {
+    "salary": "48120.10",
+    "title": "casheir",
+    "description": "run credit and debit cards, make change for cash payments, and provide general customer service.",
+    "user_id": 1
+  },
+  {
+    "salary": "40120.99",
+    "title": "cleaner",
+    "description": "responsible for cleaning, stocking, and supplying designated facility areas",
+    "user_id": 1
+  },
+  {
+    "salary": "550120.87",
+    "title": "senior cook",
+    "description": "preparing and cooking food in a specific station and assisting others",
+    "user_id": 1
+  }
 ]
