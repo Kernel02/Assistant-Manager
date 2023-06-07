@@ -5,7 +5,14 @@ const User = require("./User");
 
 Employee.belongsTo(Role, {
   foreignKey: "role_id",
- 
+});
+
+Menu.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+Employee.belongsTo(User, {
+  foreignKey: "user_id",
 });
 
 module.exports = { Employee, Menu, Role, User };
