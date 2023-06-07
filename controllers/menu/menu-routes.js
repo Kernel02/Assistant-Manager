@@ -8,10 +8,13 @@ router.get("/", withAuth, async (req, res) => {
       order: [["name", "ASC"]],
     });
     const menuItems = menuData.map((item) => item.get({ plain: true }));
-    console.log(menuData);
-    console.log(menuItems);
 
-    res.status(200).render("menu-items", { menuItems });
+    res
+      .status(200)
+      .render("menu-items", {
+        menuItems,
+        logged_in: req.sessionStore.logged_in,
+      });
   } catch (err) {
     res.status(500).json(err);
   }

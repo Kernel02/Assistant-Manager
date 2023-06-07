@@ -3,6 +3,53 @@ const employeeForm = $("#employee-form");
 const roleForm = $("#role-form");
 const menuForm = $("#menu-item-form");
 const dropdown = $(".dropdown-trigger");
+const loginForm = $("#login-form");
+const signupForm = $("#signup-form");
+
+const loginHandler = async (event) => {
+  event.preventDefault();
+
+  const email = event.target[0].value;
+  const password = event.target[1].value;
+
+  if (email && password) {
+    // Send a POST request to the API endpoint
+    const response = await fetch("/login/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      document.location.replace("/");
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
+
+const signupHandler = async (event) => {
+  event.preventDefault();
+  console.log("Hello");
+
+  const email = event.target[0].value;
+  const password = event.target[1].value;
+
+  if (email && password) {
+    console.log("yes");
+    const response = await fetch("/signup", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.ok) {
+      document.location.replace("/");
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
 
 const employeeHandler = async (event) => {
   event.preventDefault();
@@ -95,3 +142,5 @@ dropdown.on("click", changeArrow);
 employeeForm.on("submit", employeeHandler);
 roleForm.on("submit", roleHandler);
 menuForm.on("submit", menuHandler);
+loginForm.on("submit", loginHandler);
+signupForm.on("submit", signupHandler);
