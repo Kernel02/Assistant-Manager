@@ -48,3 +48,93 @@ form {
   flex-direction: row;
   flex-wrap: wrap;
 }
+/* styling for the login page  */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(245, 197, 109);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: blue;
+  font-size: 45px;
+  text-transform: none;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+  text-transform: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #777;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(120, 165, 250);
+}
+
+.create-account {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+.create-account a {
+  color: orange;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
