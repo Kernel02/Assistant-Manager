@@ -12,6 +12,11 @@ main {
   flex: 1 0 auto;
 }
 
+#login-page,
+#signup-page {
+  text-align: center;
+}
+
 img {
   max-width: 100%;
 }
@@ -50,7 +55,7 @@ form {
 }
 
 #roles {
-  max-width: 45%;;
+  max-width: 45%;
 }
 /* styling for the login page 
 body {

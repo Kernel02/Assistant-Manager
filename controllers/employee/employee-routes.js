@@ -26,7 +26,13 @@ router.get("/", withAuth, async (req, res) => {
     });
 
     const roles = roleData.map((role) => role.get({ plain: true }));
-    res.status(200).render("employee-info", { employees, roles });
+    res
+      .status(200)
+      .render("employee-info", {
+        employees,
+        roles,
+        logged_in: req.sessionStore.logged_in,
+      });
   } catch (err) {
     res.status(500).json(err);
   }
