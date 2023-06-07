@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Menu } = require("../../models");
-const withAuth = require('../../utils/auth');
+const withAuth = require("../../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
   try {
@@ -17,21 +17,20 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.post("/",withAuth, async (req,res) => {
+router.post("/", async (req, res) => {
   try {
-  const menuData = await Menu.create({
-          email: req.session.email,
-          id: req.body.id,
-          name: req.body.name,
-          description: req.body.description,
-          price: req.body.price,
-          calory: req.body.calory,
-      });
+    const menuData = await Menu.create({
+      email: req.session.email,
+      id: req.body.id,
+      name: req.body.name,
+      description: req.body.description,
+      price: req.body.price,
+      calory: req.body.calory,
+    });
   } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
-
 
 module.exports = router;
