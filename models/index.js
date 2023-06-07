@@ -7,11 +7,11 @@ Employee.belongsTo(Role, {
   foreignKey: "role_id",
 });
 
-Menu.belongsTo(User, {
+Menu.hasOne(User, {
   foreignKey: "user_id",
 });
 
-Employee.belongsTo(User, {
+Employee.hasOne(User, {
   foreignKey: "user_id",
 });
 
