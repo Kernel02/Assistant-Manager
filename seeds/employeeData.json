@@ -5,7 +5,8 @@
     "email": "alexseptember@gmail.com",
     "address": "10000 Alexandria, VA",
     "phone": 301123123,
-    "role_id": 1
+    "role_id": 1,
+    "user_id": 1
   },
 
   {
@@ -14,7 +15,8 @@
     "email": "barbaraeden12@gmail.com",
     "address": "2000 Silver Spring, MD",
     "phone": 6781123123,
-    "role_id": 2
+    "role_id": 2,
+    "user_id": 1
   },
 
   {
@@ -23,7 +25,8 @@
     "email": "lukakuapril56@gmail.com",
     "address": "500 Alexandria, VA",
     "phone": 2401123123,
-    "role_id": 3
+    "role_id": 3,
+    "user_id": 1
   },
 
   {
@@ -32,7 +35,8 @@
     "email": "liliaugust88@gmail.com",
     "address": "00 Alexandria, VA",
     "phone": 3021123456,
-    "role_id": 4
+    "role_id": 4,
+    "user_id": 1
   },
 
   {
@@ -41,6 +45,7 @@
     "email": "jajanuary98@gmail.com",
     "address": "55 Washington, DC",
     "phone": 1011123456,
-    "role_id": 5
+    "role_id": 5,
+    "user_id": 1
   }
 ]

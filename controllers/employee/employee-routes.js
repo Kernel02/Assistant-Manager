@@ -48,6 +48,7 @@ router.post("/", async (req, res) => {
       ...req.body,
       user_id: req.session.user_id,
     });
+    res.status(200).json(newEmployeeData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -60,6 +61,7 @@ router.post("/role", async (req, res) => {
       ...req.body,
       user_id: req.session.user_id,
     });
+    res.status(200).json(newRoleData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
