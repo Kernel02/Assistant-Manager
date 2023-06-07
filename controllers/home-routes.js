@@ -4,11 +4,12 @@ const withAuth = require("../utils/auth");
 
 // route to get to the homepage
 router.get("/", async (req, res) => {
-  res.render("homepage.handlebars", { logged_in: req.sessionStore.logged_in });
+  console.log(req.session);
+  res.render("homepage.handlebars", { logged_in: req.session.logged_in });
 });
 
 router.get("/", (req, res) => {
-  if (req.sessionStore.logged_in) {
+  if (req.session.logged_in) {
     res.redirect("/");
     return;
   }
