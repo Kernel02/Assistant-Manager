@@ -68,6 +68,19 @@ router.post("/role", async (req, res) => {
   }
 });
 
+router.delete("/role/:id", async (req, res) => {
+  try {
+    const roleData = await Role.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(roleData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.delete("/:id", async (req, res) => {
   try {
     const employeeData = await Employee.destroy({

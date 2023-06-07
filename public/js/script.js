@@ -6,6 +6,9 @@ const dropdown = $(".dropdown-trigger");
 const loginForm = $("#login-form");
 const signupForm = $("#signup-form");
 const logoutBtn = $("#logout-btn");
+const employeeDelBtn = $(".employee-del-btn");
+const roleDelBtn = $(".role-del-btn");
+const menuDelBtn = $(".menu-del-btn");
 
 const loginHandler = async (event) => {
   event.preventDefault();
@@ -150,6 +153,36 @@ const menuHandler = async (event) => {
   }
 };
 
+const employeeDelButtonHandler = async (event) => {
+  const id = event.target.id;
+  const response = await fetch(`/employee/${id}`, { method: "DELETE" });
+  if (response.ok) {
+    document.location.replace("/employee");
+  } else {
+    alert("Failed to delete employee");
+  }
+};
+
+const roleDelButtonHandler = async (event) => {
+  const id = event.target.id;
+  const response = await fetch(`/employee/role/${id}`, { method: "DELETE" });
+  if (response.ok) {
+    document.location.replace("/employee");
+  } else {
+    alert("Failed to delete role");
+  }
+};
+
+const menuDelButtonHandler = async (event) => {
+  const id = event.target.id;
+  const response = await fetch(`/menu/${id}`, { method: "DELETE" });
+  if (response.ok) {
+    document.location.replace("/menu");
+  } else {
+    alert("Failed to delete menu item");
+  }
+};
+
 $(document).ready(function () {
   $(".parallax").parallax();
   $(".dropdown-trigger").dropdown();
@@ -175,3 +208,6 @@ menuForm.on("submit", menuHandler);
 loginForm.on("submit", loginHandler);
 signupForm.on("submit", signupHandler);
 logoutBtn.on("click", logoutHandler);
+employeeDelBtn.on("click", employeeDelButtonHandler);
+roleDelBtn.on("click", roleDelButtonHandler);
+menuDelBtn.on("click", menuDelButtonHandler);
