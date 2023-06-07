@@ -1,49 +1,36 @@
-
-  [
+[
   {
     "name": "chicken salad",
     "description": "salad/mixed salad with chicken, boiled egg, and salad dressing",
-    "category": "mixed salad",
-    "price": 11.90,
+    "price": 11.9,
     "calory": "266 calories per 113 gram"
-    
- 
   },
 
   {
     "name": "para pizza",
     "description": " broccoli, tomatoes, onions,mushrooms,green pappers",
-    "category": "veggie pizza",
-    "price": 15.70,
+    "price": 15.7,
     "calory": "285 calories per 107 gram"
- 
   },
 
   {
     "name": "yebeg tibis",
     "description": " lamb, berbere, garlic, green chiles, spiced butter, cardamom, tomatoes",
-    "category": "tibs",
-    "price": 11.90,
+    "price": 11.9,
     "calory": "444kcal per 113 gram"
- 
   },
 
   {
     "name": "chicken salad",
     "description": "Any salad/mixed salad with chicken, boiled egg, and salad dressing",
-    "category": "mixed salad",
-    "price": 11.90,
+    "price": 11.9,
     "calory": "266 calories per 113 gram"
- 
   },
-    
+
   {
     "name": "burger",
     "description": "beef, egg,  red onion, garlic, pepper, mayonnaise",
-    "category": "burger",
-    "price": 6.90,
+    "price": 6.9,
     "calory": " 354 calories per 120 gram"
   }
-   
 ]
- 

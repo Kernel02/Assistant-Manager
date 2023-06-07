@@ -48,7 +48,11 @@ form {
   flex-direction: row;
   flex-wrap: wrap;
 }
-/* styling for the login page  */
+
+#roles {
+  max-width: 45%;;
+}
+/* styling for the login page 
 body {
   font-family: Arial, sans-serif;
   background-color: rgb(245, 197, 109);
@@ -137,4 +141,4 @@ button[type="submit"]:hover {
 
 .create-account a:hover {
   text-decoration: underline;
-}
+} */

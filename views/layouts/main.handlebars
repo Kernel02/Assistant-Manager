@@ -31,7 +31,11 @@
         <div class="nav-wrapper orange">
           <a href="/" class="brand-logo">Assistant Manager</a>
           <ul class="right hide-on-med-and-down">
-            <li><a class="btn" href="/login">Login</a></li>
+            {{#if logged_in}}
+              <li><a id="logout-btn" class="btn" href="/">Logout</a></li>
+            {{else}}
+              <li><a class="btn" href="/login">Login</a></li>
+            {{/if}}
             <li><a
                 class="dropdown-trigger"
                 href="#!"

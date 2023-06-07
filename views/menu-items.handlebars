@@ -47,27 +47,23 @@
   </div>
   <div class="divider"></div>
   {{! Form for Adding New Menu Items }}
-  <form id="add-menu-item-form">
+  <form id="menu-item-form">
     <h3>Add New Menu Item</h3>
-    <div class="form-group">
-      <label for="name">Name:</label>
+    <div class="input-field">
+      <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
     </div>
-    <div class="form-group">
-      <label for="description">Description:</label>
+    <div class="input-field">
+      <label for="description">Description</label>
       <textarea id="description" name="description" required></textarea>
     </div>
-    <div class="form-group">
-      <label for="price">Price:</label>
+    <div class="input-field">
+      <label for="price">Price</label>
       <input type="number" step="0.01" id="price" name="price" required />
     </div>
-    <div class="form-group">
-      <label for="ingredients">Ingredients:</label>
-      <textarea id="ingredients" name="ingredients"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="calories">Calories:</label>
-      <input type="number" id="calories" name="calories" />
+    <div class="input-field">
+      <label for="calories">Calories</label>
+      <input type="number" id="calories" name="calories" required />
     </div>
     <button type="submit" class="btn btn-primary">Add Item</button>
   </form>
