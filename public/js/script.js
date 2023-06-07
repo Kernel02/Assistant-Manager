@@ -5,6 +5,7 @@ const menuForm = $("#menu-item-form");
 const dropdown = $(".dropdown-trigger");
 const loginForm = $("#login-form");
 const signupForm = $("#signup-form");
+const logoutBtn = $("#logout-btn");
 
 const loginHandler = async (event) => {
   event.preventDefault();
@@ -48,6 +49,19 @@ const signupHandler = async (event) => {
     } else {
       alert(response.statusText);
     }
+  }
+};
+
+const logoutHandler = async () => {
+  const response = await fetch("login/logout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (response.ok) {
+    document.location.replace("/");
+  } else {
+    alert(response.statusText);
   }
 };
 
@@ -144,3 +158,4 @@ roleForm.on("submit", roleHandler);
 menuForm.on("submit", menuHandler);
 loginForm.on("submit", loginHandler);
 signupForm.on("submit", signupHandler);
+logoutBtn.on("click", logoutHandler);

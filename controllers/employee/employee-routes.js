@@ -5,6 +5,9 @@ const withAuth = require("../../utils/auth");
 router.get("/", withAuth, async (req, res) => {
   try {
     const employeeData = await Employee.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
       include: [
         {
           model: Role,
@@ -22,17 +25,18 @@ router.get("/", withAuth, async (req, res) => {
     );
 
     const roleData = await Role.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
       order: [["description", "ASC"]],
     });
 
     const roles = roleData.map((role) => role.get({ plain: true }));
-    res
-      .status(200)
-      .render("employee-info", {
-        employees,
-        roles,
-        logged_in: req.sessionStore.logged_in,
-      });
+    res.status(200).render("employee-info", {
+      employees,
+      roles,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }

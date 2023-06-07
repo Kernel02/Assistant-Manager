@@ -5,16 +5,17 @@ const withAuth = require("../../utils/auth");
 router.get("/", withAuth, async (req, res) => {
   try {
     const menuData = await Menu.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
       order: [["name", "ASC"]],
     });
     const menuItems = menuData.map((item) => item.get({ plain: true }));
 
-    res
-      .status(200)
-      .render("menu-items", {
-        menuItems,
-        logged_in: req.sessionStore.logged_in,
-      });
+    res.status(200).render("menu-items", {
+      menuItems,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -23,8 +24,7 @@ router.get("/", withAuth, async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const menuData = await Menu.create({
-      email: req.session.email,
-      id: req.body.id,
+      user_id: req.session.user_id,
       name: req.body.name,
       description: req.body.description,
       price: req.body.price,
