@@ -3,36 +3,40 @@
   <h2>Employee Information</h2>
 
   <div id="employee-info" class="center-align">
-    {{#each employees}}
-      <div class="card">
-        <div class="card-content">
-          <h2>{{first_name}} {{last_name}}</h2>
-        </div>
-        <div class="card-tabs">
-          <ul class="tabs">
-            <li class="tab"><a href="#{{id}}role">Role</a></li>
-            <li class="tab"><a class="active" href="#{{id}}info">Personal
-                Information</a></li>
-          </ul>
-        </div>
-        <div class="card-content grey lighten-4">
-          <div id="{{id}}role">
-            <p><strong>Role:</strong> {{role.title}}</p>
-            <p><strong>Salary:</strong> {{role.salary}}</p>
+    {{#if employees}}
+      {{#each employees}}
+        <div class="card">
+          <div class="card-content">
+            <h2>{{first_name}} {{last_name}}</h2>
           </div>
-          <div id="{{id}}info">
-            <p><strong>Email:</strong> {{email}}</p>
-            <p><strong>Phone:</strong> {{phone}}</p>
-            <p><strong>Address:</strong> {{address}}</p>
+          <div class="card-tabs">
+            <ul class="tabs">
+              <li class="tab"><a href="#{{id}}role">Role</a></li>
+              <li class="tab"><a class="active" href="#{{id}}info">Personal
+                  Information</a></li>
+            </ul>
+          </div>
+          <div class="card-content grey lighten-4">
+            <div id="{{id}}role">
+              <p><strong>Role:</strong> {{role.title}}</p>
+              <p><strong>Salary:</strong> {{role.salary}}</p>
+            </div>
+            <div id="{{id}}info">
+              <p><strong>Email:</strong> {{email}}</p>
+              <p><strong>Phone:</strong> {{phone}}</p>
+              <p><strong>Address:</strong> {{address}}</p>
+            </div>
+          </div>
+          <div class="card-action">
+            <a
+              class="employee-del-btn btn-floating btn-large waves-effect waves-light red"
+            ><i id="{{id}}" class="material-icons">delete</i></a>
           </div>
         </div>
-        <div class="card-action">
-          <a
-            class="employee-del-btn btn-floating btn-large waves-effect waves-light red"
-          ><i id="{{id}}" class="material-icons">delete</i></a>
-        </div>
-      </div>
-    {{/each}}
+      {{/each}}
+    {{else}}
+      <p>No employees found</p>
+    {{/if}}
   </div>
   <div class="divider"></div>
   <ul id="tabs-swipe-demo" class="tabs">
@@ -92,21 +96,25 @@
     </div>
   </div>
   <div id="roles" class="row">
-    {{#each roles}}
-      <div class="card">
-        <div class="card-content">
-          <span class="card-title">{{title}}</span>
-          <div class="divider"></div>
-          <p>{{description}}</p>
-          <p>Salary: {{salary}}</p>
+    {{#if roles}}
+      {{#each roles}}
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">{{title}}</span>
+            <div class="divider"></div>
+            <p>{{description}}</p>
+            <p>Salary: {{salary}}</p>
+          </div>
+          <div class="card-action">
+            <a
+              class="role-del-btn btn-floating btn-large waves-effect waves-light red"
+            ><i id="{{id}}" class="material-icons">delete</i></a>
+          </div>
         </div>
-        <div class="card-action">
-          <a
-            class="role-del-btn btn-floating btn-large waves-effect waves-light red"
-          ><i id="{{id}}" class="material-icons">delete</i></a>
-        </div>
-      </div>
-    {{/each}}
+      {{/each}}
+    {{else}}
+      <p>No roles found</p>
+    {{/if}}
     <div class="divider"></div>
     <div class="col l12 s12">
       <h2>Add Role</h2>

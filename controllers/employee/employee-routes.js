@@ -73,6 +73,7 @@ router.delete("/role/:id", async (req, res) => {
     const roleData = await Role.destroy({
       where: {
         id: req.params.id,
+        user_id: req.session.user_id,
       },
     });
     res.status(200).json(roleData);
@@ -86,6 +87,7 @@ router.delete("/:id", async (req, res) => {
     const employeeData = await Employee.destroy({
       where: {
         id: req.params.id,
+        user_id: req.session.user_id,
       },
     });
     res.status(200).json(employeeData);
